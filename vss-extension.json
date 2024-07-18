@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "get-stage-status-task",
     "name": "Get Stage Status",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "jlin",
     "targets": [
         {
@@ -17,8 +17,7 @@
         "default": "images/extension-icon.png"        
     },
     "files": [
-        { "path": "getstagestatus" },
-        { "path": "./node_modules/azure-pipelines-task-lib" }
+        { "path": "getstagestatus" }
     ],
     "contributions": [
         {
