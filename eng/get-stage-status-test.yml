@@ -70,4 +70,4 @@ stages:
         steps:
           - checkout: none
 
-          - task: DownloadLatestArtifact@1
+          - task: DownloadLatestArtifact@0
