@@ -69,3 +69,5 @@ stages:
 
         steps:
           - checkout: none
+
+          - task: DownloadLatestArtifact
