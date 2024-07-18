@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
     "id": "dffcffaa-34a7-40b6-a79e-a34bd2a45c90",
-    "name": "GetStageStatus",
+    "name": "DownloadLatestArtifact",
     "friendlyName": "Get stage status",
     "description": "Get stage status",
     "helpMarkDown": "",
