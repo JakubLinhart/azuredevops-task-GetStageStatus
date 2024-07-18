@@ -12,8 +12,8 @@ stages:
           - pwsh: |
               echo 'JobA - step'
           - pwsh: |
-              For ($i = 0; $i -lt 10; $i++) {
-                echo "##vso[task.setvariable variable=buildArtifactIndexNet8-$i;isoutput=true;isreadonly=true]this should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possible"
+              For ($i = 0; $i -lt 100; $i++) {
+                echo "##vso[task.setvariable variable=buildArtifactIndexNet8-$i;isoutput=true;isreadonly=true]this should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possible"
               }
 
       - job: JobB
@@ -24,8 +24,8 @@ stages:
           - pwsh: |
               echo 'JobA - step'
           - pwsh: |
-              For ($i = 0; $i -lt 10; $i++) {
-                echo "##vso[task.setvariable variable=buildArtifactIndexNet8-$i;isoutput=true;isreadonly=true]this should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possible"
+              For ($i = 0; $i -lt 100; $i++) {
+                echo "##vso[task.setvariable variable=buildArtifactIndexNet8-$i;isoutput=true;isreadonly=true]this should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possible"
               }
 
       - job: JobC
@@ -35,8 +35,8 @@ stages:
           - pwsh: |
               echo 'JobC - step'
           - pwsh: |
-              For ($i = 0; $i -lt 10; $i++) {
-                echo "##vso[task.setvariable variable=buildArtifactIndexNet8-$i;isoutput=true;isreadonly=true]this should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possible"
+              For ($i = 0; $i -lt 100; $i++) {
+                echo "##vso[task.setvariable variable=buildArtifactIndexNet8-$i;isoutput=true;isreadonly=true]this should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possiblethis should be a text that is as long as possible"
               }
 
   - stage: FailedStage
