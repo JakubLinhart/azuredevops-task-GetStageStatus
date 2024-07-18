@@ -1,0 +1,71 @@
+trigger: none
+pr: none
+
+stages:
+  - stage: SuccessfulStage
+    displayName: Successful stage
+    jobs:
+      - job: JobA
+        displayName: JobA
+        steps:
+          - checkout: none
+          - pwsh: |
+              echo 'JobA - step'
+
+      - job: JobB
+        displayName: JobB
+        dependsOn: [ 'JobA' ]
+        steps:
+          - checkout: none
+          - pwsh: |
+              echo 'JobA - step'
+
+      - job: JobC
+        displayName: JobC
+        steps:
+          - checkout: none
+          - pwsh: |
+              echo 'JobC - step'
+
+  - stage: FailedStage
+    displayName: Failed stage
+    dependsOn: []
+    jobs:
+      - job: JobD
+        displayName: JobD
+        steps:
+          - checkout: none
+          - pwsh: |
+              echo 'JobD - step'
+              echo "##vso[task.logissue type=error]We need a failed job to perform all required validations. Failure of this task is expected and necessary output. What is important is the result of 'Validation stage' and it has to be ✅."
+              echo "##vso[task.complete result=Failed;]"
+
+      - job: JobE
+        displayName: JobE
+        dependsOn: [ 'JobD' ]
+        condition: always()
+        steps:
+          - checkout: none
+          - pwsh: |
+              echo 'JobE - step'
+
+      - job: JobF
+        displayName: JobF
+        steps:
+          - checkout: none
+          - pwsh: |
+              echo 'JobF - step'
+
+  - stage: ValidationStage
+    displayName: Validation stage
+    dependsOn: [ 'SuccessfulStage', 'FailedStage' ]
+    condition: always()
+    jobs:
+      - job: test
+        displayName: Test Results
+        variables:
+          successfulStageDependenciesJson: $[convertToJson(stageDependencies.SuccessfulStage)]
+          failedStageDependenciesJson: $[convertToJson(stageDependencies.FailedStage)]
+
+        steps:
+          - checkout: none

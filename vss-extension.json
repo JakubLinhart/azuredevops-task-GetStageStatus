@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "get-stage-status-task",
+    "name": "Get Stage Status",
+    "version": "0.0.1",
+    "publisher": "jlin",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Task to get a stage status in an easy, fast and reliable way.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "getstagestatus"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-get-stage-status",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "getstagestatus"
+            }
+        }
+    ]
+}
