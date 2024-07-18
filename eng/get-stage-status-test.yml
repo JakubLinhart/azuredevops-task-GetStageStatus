@@ -72,4 +72,4 @@ stages:
 
           - task: GetStageStatus@0.0.9
             inputs:
-              samplestring: $[convertToJson(stageDependencies.SuccessfulStage)]
+              samplestring: $(successfulStageDependenciesJson)
