@@ -70,6 +70,6 @@ stages:
         steps:
           - checkout: none
 
-          - task: GetStageStatus@0
+          - task: DownloadLatestArtifact@0.0.5
             inputs:
               samplestring: asdf
