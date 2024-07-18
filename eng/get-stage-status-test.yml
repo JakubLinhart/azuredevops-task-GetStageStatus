@@ -64,12 +64,12 @@ stages:
       - job: test
         displayName: Test Results
         variables:
-          successfulStageDependenciesJson: $[stageDependencies.SuccessfulStage]
-          failedStageDependenciesJson: $[stageDependencies.FailedStage]
+          successfulStageDependenciesJson: $[convertToJson(stageDependencies.SuccessfulStage)]
+          failedStageDependenciesJson: $[convertToJson(stageDependencies.FailedStage)]
 
         steps:
           - checkout: none
 
           - task: GetStageStatus@0.0.9
             inputs:
-              samplestring: asdf
+              samplestring: $[convertToJson(stageDependencies.SuccessfulStage)]
